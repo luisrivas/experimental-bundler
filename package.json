@@ -1,14 +1,14 @@
 {
   "name": "experimental-bundler",
   "version": "1.0.0",
-  "description": "",
+  "description": "An experimental set Javascript bundler tools",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Luis Rivas <luis.rivas024@gmail.com>",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "esbuild": "^0.14.22"
   }
