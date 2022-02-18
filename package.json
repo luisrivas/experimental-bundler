@@ -1,0 +1,12 @@
+{
+  "name": "experimental-bundler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luis Rivas <luis.rivas024@gmail.com>",
+  "license": "MIT"
+}
