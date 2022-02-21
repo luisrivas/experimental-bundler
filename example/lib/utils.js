@@ -15,6 +15,12 @@ function testFunction() {
 }
 
 
+function unused() {
+    console.log("this shouyld not appear");
+}
+
+
 module.exports = {
-    test: testFunction
+    test: testFunction,
+    unused: unused
 }
