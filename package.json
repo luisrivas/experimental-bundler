@@ -6,12 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:debug": "esbuild example/app.js --bundle --outdir=./dist/build.js",
-    "build": "esbuild example/app.js --bundle --minify --outdir=./dist/build.js"
+    "build": "esbuild example/app.js --bundle --minify --outdir=./dist/build.js",
+    "serve:es5": "esbuild example/app.js --servedir=www --outdir=www/js --bundle --resolve-extensions=.js",
+    "serve:es6": "./builds/dev.js"
   },
   "keywords": [],
   "author": "Luis Rivas <luis.rivas024@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "esbuild": "^0.14.22"
+    "esbuild": "^0.14.22",
+    "esbuild-plugin-swc": "^1.0.1",
+    "swc": "^1.0.11"
+  },
+  "devDependencies": {
+    "esbuild-serve": "^1.0.1"
   }
 }
