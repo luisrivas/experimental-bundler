@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "npm run build-fast -- --watch",
-    "build": "tsup src/index.ts",
+    "build": "tsup src/cli.ts",
     "build-fast": "npm run build -- --no-dts"
   },
   "keywords": [],
