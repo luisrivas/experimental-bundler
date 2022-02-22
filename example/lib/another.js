@@ -4,7 +4,12 @@ function testFunction() {
     return 'another commonjs';
 }
 
+function testUnused() {
+    console.log("this should not appear")
+}
+
 
 module.exports = {
-    test2 : testFunction
+    test2 : testFunction,
+    testUnused
 }
