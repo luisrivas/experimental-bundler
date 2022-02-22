@@ -12,7 +12,8 @@ export async function build(options){
     metafile: true,
     logLevel: 'verbose',
     sourcemap: options.sourcemap,
-    plugins: [swcPlugin('es5', options.sourcemap)]
+    platform: options.platform || 'browser',
+    plugins: [swcPlugin(options.target, options.sourcemap)]
   });
 }
 
