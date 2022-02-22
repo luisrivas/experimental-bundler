@@ -1,6 +1,10 @@
 
 class Car {
-    constructor(name, year) {
+
+    private name:string;
+    private year:number;
+
+    constructor(name:string, year:number) {
         this.name = name;
         this.year = year;
     }
@@ -11,9 +15,10 @@ class Car {
 }
 
 export function test() {
-    console.log("es6");
-    return new Car("es6", 2014);
+    console.log("ts");
+    return new Car("ts", 2014);
 }
+
 
 export function unusedone() {
     console.log("this shouyld not appear");

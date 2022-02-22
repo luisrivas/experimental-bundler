@@ -1,15 +1,9 @@
 
-function testFunction() {
+export function test2() {
     console.log('another commonjs');
     return 'another commonjs';
 }
 
-function testUnused() {
+export function testUnused() {
     console.log("this should not appear")
-}
-
-
-module.exports = {
-    test2 : testFunction,
-    testUnused
 }
