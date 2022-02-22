@@ -4,11 +4,11 @@
   "description": "An experimental set Javascript bundler tools",
   "main": "index.js",
   "bin": {
-    "ec": "dist/cli-default.js"
+    "ec": "dist/index.js"
   },
   "scripts": {
     "dev": "npm run build-fast -- --watch",
-    "build": "tsup src/index.ts",
+    "build": "tsup src/cli.ts",
     "build-fast": "npm run build -- --no-dts"
   },
   "keywords": [],

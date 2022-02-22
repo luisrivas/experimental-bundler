@@ -1,4 +1,4 @@
-import { Options as SWCOptions, JscTarget,  Output, transform, transformSync,  } from '@swc/core';
+import { Options as SWCOptions, JscTarget,  Output, transform } from '@swc/core';
 import { Plugin, OnLoadArgs, OnLoadResult, OnResolveArgs } from 'esbuild';
 import path from 'path';
 import fs from 'fs/promises';
