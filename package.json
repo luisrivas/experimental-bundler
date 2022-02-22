@@ -4,7 +4,7 @@
   "description": "An experimental set Javascript bundler tools",
   "main": "index.js",
   "bin": {
-    "ec": "dist/index.js"
+    "ec": "dist/cli.js"
   },
   "scripts": {
     "dev": "npm run build-fast -- --watch",
