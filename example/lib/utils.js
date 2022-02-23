@@ -16,7 +16,7 @@ function testFunction() {
 
 
 function unused() {
-    console.log("this shouyld not appear");
+    console.log("this should not appear");
 }
 
 
