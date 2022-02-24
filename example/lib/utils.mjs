@@ -16,5 +16,5 @@ export function test() {
 }
 
 export function unusedone() {
-    console.log("this shouyld not appear");
+    console.log("this should not appear");
 }

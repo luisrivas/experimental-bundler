@@ -1,8 +1,15 @@
 #!/usr/bin/env node
+
 import { cac } from 'cac'
 import { join } from 'path'
 import { readFileSync } from 'fs'
 import { build, analyzeMetafile } from './core'
+import * as serve from 'create-serve';
+
+async function print_summary(result) {
+  const text = await analyzeMetafile(result.metafile)
+  console.log(text);
+}
 
 async function initialize() {
 
@@ -24,13 +31,31 @@ async function initialize() {
     .option('--platform <platform>', 'Target platform', {
       default: 'browser',
     })
+    .option('--dev', 'Watch and serve output directory on port 7000', {
+      default: false,
+    })
     .action(async (entryPoints, options) => {
+
+      if(options.dev) {
+        options.watchCallback = async function(error, result) {
+          if (error) {
+            console.error('Build failed:', error);
+          }
+          else {
+            serve.update();
+            await print_summary(result);
+          }
+        }
+      }
+
       const result = await build({entryPoints, ...options})
-      const text = await analyzeMetafile(result.metafile)
-      console.log(text)
+      await print_summary(result);
+      if(options.dev) {
+        serve.start({root: options.d, live: true});
+      }
     })
 
-  cli.help()
+  cli.help();
 
   const pkgPath = join(__dirname, '../package.json')
   cli.version(JSON.parse(readFileSync(pkgPath, 'utf8')).version)
