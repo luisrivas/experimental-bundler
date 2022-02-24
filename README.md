@@ -1,8 +1,10 @@
 # Experimental Bundler 🧪 (Go + Rust = Fastest Javascript builds ever)
 
-An experimental set Javascript bundling tools focus on provide the best performance and developer experience.
+An experimental set of Javascript bundling tools focusing on the best performance and developer experience.
 
-This tool enable you to bundle and transpile any Javascript or Typescript versions targeting not only Browsers, but also any Node.js platform.
+The experimental compiler enables you to bundle and transpile any Javascript and Typescript version, targeting any platform capable of running Javascript.
+
+We are replacing [Babel](https://babeljs.io/) with a [20-70X faster](https://swc.rs/) way to transpile Javascript,and  [Webpack](https://webpack.js.org/) with a [modern bundler 10-100X faster.](https://esbuild.github.io/)
 
 =================
 
