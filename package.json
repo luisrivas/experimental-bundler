@@ -1,10 +1,10 @@
 {
-  "name": "builder",
+  "name": "exb",
   "version": "1.0.0",
-  "description": "An experimental set Javascript bundler tools",
+  "description": "An experimental set of Javascript bundler tools focused on performance.",
   "main": "index.js",
   "bin": {
-    "ec": "dist/cli.js"
+    "exb": "dist/cli.js"
   },
   "scripts": {
     "dev": "npm run build -- --watch",

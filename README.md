@@ -1,6 +1,6 @@
-# Experimental Bundler 🧪 (Go + Rust = Fastest Javascript builds ever)
+# Experimental Bundler 🧪 🏗 (Go + Rust = Fastest Javascript builds ever)
 
-An experimental set of Javascript bundling tools focusing on the best performance and developer experience.
+An experimental set of Javascript bundling tools focused on the best performance and developer experience.
 
 The experimental compiler enables you to bundle and transpile any Javascript and Typescript version, targeting any platform capable of running Javascript.
 
@@ -15,19 +15,19 @@ We are replacing [Babel](https://babeljs.io/) with a [20-70X faster](https://swc
 <!-- usage -->
 ```sh-session
 $ npm install -g experimental-bundler
-$ ec COMMAND
+$ exb COMMAND
 running command...
-$ ec (--version)
-ec/1.0.0 darwin-x64 node-v16.13.1
-$ ec --help [COMMAND]
+$ exb (--version)
+exb/1.0.0 darwin-x64 node-v16.13.1
+$ exb --help [COMMAND]
 Usage:
-  $ ec [...files]
+  $ exb [...files]
 
 Commands:
   [...files]  Bundle files
 
 For more info, run any command with the `--help` flag:
-  $ ec --help
+  $ exb --help
 
 Options:
   -d, --out-dir <dir>    Output directory (default: dist)
