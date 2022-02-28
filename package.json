@@ -10,9 +10,14 @@
     "dev": "npm run build -- --watch",
     "build": "esbuild ./src/cli.ts --bundle --platform=node --external:esbuild --external:cac --external:@swc/core --outdir=dist --format=cjs --minify"
   },
-  "keywords": [],
-  "author": "Luis Rivas <luis.rivas024@gmail.com>",
-  "license": "UNLICENSED",
+  "keywords": ["bundler", "esbuild", "swc", "modern"],
+  "author": "Luis Rivas <luisrivas>",
+  "contributors": [
+    {
+      "name" : "Oscar Plaza <DementeTech2>"
+    }
+  ],
+  "license": "MIT",
   "dependencies": {
     "@swc/core": "^1.2.143",
     "cac": "^6.7.12",
