@@ -14,7 +14,6 @@ We are replacing [Babel](https://babeljs.io/) with a [20-70X faster](https://swc
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g experimental-bundler
 $ exb COMMAND
 running command...
 $ exb (--version)
