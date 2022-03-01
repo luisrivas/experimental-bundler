@@ -11,6 +11,10 @@ async function print_summary(result) {
   console.log(text);
 }
 
+function ensureArray(input: string): string[] {
+  return Array.isArray(input) ? input : input.split(',')
+}
+
 async function initialize() {
 
   const cli = cac('ec')
@@ -31,6 +35,7 @@ async function initialize() {
     .option('--platform <platform>', 'Target platform', {
       default: 'browser',
     })
+    .option('--external <name>', 'Mark specific packages as external')
     .option('--dev', 'Watch and serve output directory on port 7000', {
       default: false,
     })
@@ -47,6 +52,12 @@ async function initialize() {
           }
         }
       }
+
+      if (options.external) {
+        const external = ensureArray(options.external)
+        options.external = external
+      }
+      
 
       const result = await build({entryPoints, ...options})
       await print_summary(result);

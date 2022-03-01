@@ -28,7 +28,8 @@ export async function build(options){
     watch: watch,
     sourcemap: options.sourcemap,
     platform: options.platform || 'browser',
-    plugins: [swcPlugin(options.target, options.sourcemap)]
+    plugins: [swcPlugin(options.target, options.sourcemap)],
+    external: options.external
   });
 }
 
